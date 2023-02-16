@@ -22,5 +22,67 @@ export const sliderItems =[
     bg: "fbf0f4"
 },
 
+]
 
+export const categories=[
+
+    {
+        id: 4,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNefLtbjv9APBghx8TfT39-PO39eGIX3llM0nBkT0&s",
+        title: "Male general dress"
+    },
+    {
+        id: 5,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgRuQGdf6jhbEmUYoOMjDeMBfh7GHJLwLhBw&usqp=CAU",
+        title: "Winter lady dress"
+    },
+    {
+        id: 6,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7NpDRGOiREblGI7hjCjwa1L1-9QOxVbQqlg&usqp=CAU",
+        title: "Girl style dress"
+    },
+]
+
+
+export const popularProducts = [
+        {
+        id: 1,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEssWgowG1dNz5Ex2jt7RGzMyJq_wKzQFWr86hegrY&s",
+
+    },
+    {
+        id: 2,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_YfGZg2JfBVHaxapg8hmBxIGnPrjSd2uwiWdkjiU&s",
+
+    },
+    {
+        id: 3,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvtdQY_apGilMW43YTf34m0lyKYPpTMPTJ0u1xI5MF&s",
+
+    },
+    {
+        id: 4,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7NpDRGOiREblGI7hjCjwa1L1-9QOxVbQqlg&usqp=CAU",
+
+    },
+    {
+        id: 5,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXNzc_L9htRbZ4C0wnLJaXGd3TnZdiM7qwzw&usqp=CAU",
+
+    },
+    {
+        id: 6,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNCJbGd3v1eD0wQCbXDtPfiB1I9tsrZoYTuw&usqp=CAU",
+
+    },
+    {
+        id: 7,
+        img: "https://media.istockphoto.com/id/1217970962/photo/elegance-peach-vintage-dress-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=Uht6bRtoSLHgt2v7FUgwb6vrGTkn7XIa85MuQXjuzSE=",
+
+    },
+    {
+        id: 8,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY1YdpzlzApKDH-l6ynGxFJU5zSRkD8vHWFQ&usqp=CAU",
+
+    },
 ]
