@@ -3,6 +3,7 @@ import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrow
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import { useState } from "react";
 import { sliderItems } from "../data";
+import {mobile} from "../responsive"
 
 const Container = styled.div`
 width:100%;
@@ -11,6 +12,7 @@ display: flex;
 // background-color: coral;
 position: relative;
 overflow: hidden;
+${mobile({display: "none"})}
 `
 const Arrow = styled.div`
 width: 50px;

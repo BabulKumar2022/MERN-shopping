@@ -1,9 +1,11 @@
-import { Email, Facebook, Instagram, PartyMode, Phone, Pinterest, Room, RoomOutlined, Twitter } from "@mui/icons-material"
+import { Email, Facebook, Instagram,  Phone, Pinterest, Room, RoomOutlined, Twitter } from "@mui/icons-material"
 import styled from "styled-components"
+import { mobile } from "../responsive"
 
 const Container = styled.div`
 display: flex;
 background-color: teal;
+${mobile({flexDirection: "column"})}
 
 `
 const Left = styled.div`
@@ -37,6 +39,7 @@ margin-right:20px;
 const Center = styled.div`
 flex: 1;
 padding:20px;
+${mobile({display: "none"})}
 `
 const Title =styled.h3`
 margin-bottom:30px;
@@ -58,6 +61,7 @@ color:white;
 const Right = styled.div`
 flex: 1;
 padding:20px;
+${mobile({backgroundColor: "gray"})}
 `
 const ContactItem =styled.div`
 margin-bottom:20px;
@@ -117,16 +121,16 @@ const Footer = () => {
         <Right>
             <Title>Contact</Title>
             <ContactItem>
-                <Room></Room>  538 Ramkrisna road, south Novel Tower 2412
+                <Room style={{marginRight:"10px"}}></Room>  538 Ramkrisna road, south Novel Tower 2412
             </ContactItem>
             <ContactItem>
-               <Phone></Phone> Phone: 0170000000, Tel:0245632, Fax:65234
+               <Phone style={{marginRight:"10px"}}></Phone> Phone: 0170000000, Tel:0245632, Fax:65234
             </ContactItem>
             <ContactItem>
-              <Email></Email>  Email: babulkumar96Yahoo.com
+              <Email style={{marginRight:"10px"}}></Email>  Email: babulkumar96Yahoo.com
             </ContactItem>
             <ContactItem>
-            <PartyMode></PartyMode> <PaymentImg src="https://e7.pngegg.com/pngimages/659/303/png-clipart-logo-brand-product-design-money-bag-payment-method-text-logo-thumbnail.png"></PaymentImg>
+             <PaymentImg src="https://e7.pngegg.com/pngimages/659/303/png-clipart-logo-brand-product-design-money-bag-payment-method-text-logo-thumbnail.png"></PaymentImg>
             </ContactItem>
         </Right>
     </Container>
