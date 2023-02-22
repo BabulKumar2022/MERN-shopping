@@ -1,4 +1,5 @@
 
+import { Route, Routes } from "react-router-dom";
 import Cart from "./pages/Cart";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -11,8 +12,12 @@ import SingleProduct from "./pages/SingleProduct";
 function App() {
   return (
     <div className="">
-
-      <Home></Home>
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path="/login" element={<Login/>}></Route>
+          <Route path="/register" element={<Register/>}></Route>
+        </Routes>
+      {/* <Home></Home> */}
       {/* <ProductList></ProductList> */}
       {/* <SingleProduct></SingleProduct> */}
       {/* <Register></Register> */}
