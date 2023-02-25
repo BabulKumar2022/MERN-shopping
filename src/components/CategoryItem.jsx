@@ -33,13 +33,14 @@ color: white;
 margin-bottom: 20px;
 
 `
-const Button = styled.button`
+const Button = styled.a`
 border: none;
 padding:20px;
 background-color: white;
-color: gray;
+color: black;
 cursor: pointer;
 font-wight: 600;
+text-decoration: none;
 `
 const CategoryItem = ({item}) => {
   return (
@@ -47,7 +48,7 @@ const CategoryItem = ({item}) => {
         <Image src={item.img}/>
         <Info>
             <Title>{item.title}</Title>
-            <Button>SHOP NOW</Button>
+            <Button href="/productList">SHOP NOW</Button>
         </Info>
     </Container>
   )

@@ -43,9 +43,10 @@ flex: 1;
 display: flex;
 align-items: center;
 `
-const Language = styled.span`
-font-size: 14px;
+const Language = styled.a`
+font-size: 18px;
 cursor: pointer;
+text-decoration:none;
 ${mobile({display: "none"})}
 `
 
@@ -72,6 +73,9 @@ const MenuItemLink = styled.a`
 font-size:14px;
 color: white;
 margin-right:10px;
+padding: 2px;
+text-decoration:none;
+
 `
 
 const Navbar = () => {
@@ -79,7 +83,7 @@ const Navbar = () => {
     <Container>
         <Wrapper>
             <Left>
-            <Language><a href="/">HOME</a></Language>
+            <Language href="/">HOME</Language>
             <SearchContainer>
             <Input placeholder='search'></Input>
              <Search style={{color:"gray", fontSize:"24px"}}></Search>
@@ -87,8 +91,11 @@ const Navbar = () => {
             </Left>
             <Center><Logo>BABUL</Logo></Center>
             <Right>
-                <MenuItemLink><a href="/register">REGISTER</a></MenuItemLink>
-                <MenuItemLink ><a href="/login">LOG IN</a></MenuItemLink>
+     
+               <MenuItemLink href="/updateProduct">UPDATE PRODUCT</MenuItemLink>
+               <MenuItemLink href="/addProduct">ADD PRODUCT</MenuItemLink>
+                <MenuItemLink href="/register">REGISTER</MenuItemLink>
+                <MenuItemLink href="/login">LOG IN</MenuItemLink>
                 <MenuItem>
                 <Badge badgeContent={4} color="secondary">
                     <ShoppingCartIcon color="" />

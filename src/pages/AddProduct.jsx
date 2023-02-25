@@ -32,101 +32,109 @@ const Input = styled.input`
   margin: 20px 10px 0px 0px;
   padding: 10px;
 `;
-const Agreement = styled.span`
-  font-size: 12px;
-  margin: 20px 0px;
-`;
+
 const Button = styled.button`
-  width: 40%;
+  width: 50%;
   border: none;
   padding: 15px 20px;
   background-color: teal;
   color: white;
   cursor: pointer;
+  margin-top:10px;
 `;
 
-const Register = () => {
-
-  
+const AddProduct = () => {
   const [user, setUser] = useState({});
-
 
   const handleAddUser = (event) => {
     event.preventDefault();
-    // console.log(user);
+    console.log(user);
 
-    fetch('http://localhost:5000/api/auth/register', {
-      method: 'POST',
+    fetch("http://localhost:5000/api/auth/products", {
+      method: "POST",
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(user)
+      body: JSON.stringify(user),
     })
-    .then(res => res.json())
-    .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
-    })
+      });
   };
 
-
-
-  const handleInputOnBlur = (event) =>{
+  const handleInputOnBlur = (event) => {
     const field = event.target.name;
     const value = event.target.value;
-   const newUser = {...user}
-   newUser[field] = value;
-   setUser(newUser);
-   
+    const newUser = { ...user };
+    newUser[field] = value;
+    setUser(newUser);
+    console.log(newUser);
   };
-
-
-
 
   return (
     <Container>
       <Wrapper>
-        <Title>CREATE AN ACCOUNT</Title>
+        <Title>ADD A NEW PRODUCT</Title>
         <Form onSubmit={handleAddUser}>
           <Input
             type="text"
-            name="username"
+            name="title"
             id="name"
-            placeholder="User Name"
+            placeholder="Title Name"
             onBlur={handleInputOnBlur}
             required
           />
           <Input
             type="text"
-            name="name"
+            name="desc"
             id="name"
-            placeholder="Full Name"
+            placeholder="Description"
             onBlur={handleInputOnBlur}
             required
           />
           <Input
-            type="email"
-            name="email"
+            type="url"
+            name="imgLink"
             id="lastName"
-            placeholder="email"
-            // value={user.name}
+            placeholder="Insert Image Url"
             onBlur={handleInputOnBlur}
             required
           />
 
           <Input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="password"
+            type="text"
+            name="category"
+            id="category"
+            placeholder="Category"
             onBlur={handleInputOnBlur}
             required
-           
           />
-         
-          <Agreement>
-            By creating an account, I consent to the processing of my personal
-            data in accordance with the <b>PRIVACY POLICY</b>
-          </Agreement>
+          <Input
+            type="text"
+            name="size"
+            id="size"
+            placeholder="Size"
+            onBlur={handleInputOnBlur}
+            required
+          />
+          <Input
+            type="text"
+            name="color"
+            id="color"
+            placeholder="Color"
+            onBlur={handleInputOnBlur}
+            required
+          />
+          <Input
+            type="number"
+            name="price"
+            id="price"
+            placeholder="Price"
+            onBlur={handleInputOnBlur}
+            required
+          />
+
           <Button type="submit">CREATE</Button>
         </Form>
       </Wrapper>
@@ -134,4 +142,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default AddProduct;

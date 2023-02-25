@@ -137,8 +137,8 @@ height:1px;
 const Cart = () => {
   return (
     <Container>
-        <Navbar/>
-        <Announcement/>
+        {/* <Navbar/>
+        <Announcement/> */}
         <Wrapper>
             <Title>YOUR BAG</Title>
             <Top>

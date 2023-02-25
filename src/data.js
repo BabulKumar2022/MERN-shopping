@@ -86,3 +86,17 @@ export const popularProducts = [
 
     },
 ]
+
+
+
+
+// {
+//     "titl": "Jaction TZ",
+//     "desc": "Long lady full dress",
+//     "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNefLtbjv9APBghx8TfT39-PO39eGIX3llM0nBkT0&s",
+//     "categories": "winter",
+//     "size": "25w",
+//     "color": "red",
+//     "price": "1200"
+ 
+//  }
