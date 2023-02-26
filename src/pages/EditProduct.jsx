@@ -43,8 +43,9 @@ const Button = styled.button`
   margin-top:10px;
 `;
 
-const AddProduct = () => {
-  const [user, setUser] = useState({});
+
+const EditProduct = () => {
+    const [user, setUser] = useState({});
 
   const handleAddUser = (event) => {
     event.preventDefault();
@@ -77,7 +78,7 @@ const AddProduct = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>ADD A NEW PRODUCT</Title>
+        <Title>EDIT THIS PRODUCT</Title>
         <Form onSubmit={handleAddUser}>
           <Input
             type="text"
@@ -141,7 +142,7 @@ const AddProduct = () => {
         </Form>
       </Wrapper>
     </Container>
-  );
-};
+  )
+}
 
-export default AddProduct;
+export default EditProduct

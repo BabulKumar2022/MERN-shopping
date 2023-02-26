@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import SingleProduct from "./pages/SingleProduct";
+import EditProduct from "./pages/EditProduct";
 
 
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/addProduct" element={<AddProduct/>}></Route>
           <Route path="/updateProduct" element={<UpdateProduct/>}></Route>
           <Route path="/productList" element={<ProductList/>}></Route>
+          <Route path="/edit/:id" element={<EditProduct/>}></Route>
           <Route path="/cart" element={<Cart/>}></Route>
 
         </Routes>
