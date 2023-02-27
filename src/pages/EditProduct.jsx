@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
@@ -45,15 +46,24 @@ const Button = styled.button`
 
 
 const EditProduct = () => {
-    const [user, setUser] = useState({});
 
+    const {id} = useParams();
+    useEffect(() =>{
+        fetch(`http://localhost:5000/api/products/${id}`)
+        .then(res => res.json())
+        .then(data => setUser(data))
+    },[]);
+
+
+  // send data to server
+    const [user, setUser] = useState({});
   const handleAddUser = (event) => {
     event.preventDefault();
   
     console.log(user);
 
-    fetch("http://localhost:5000/api/products", {
-      method: "POST",
+    fetch(`http://localhost:5000/api/products/${id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
@@ -62,7 +72,7 @@ const EditProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        alert('Product added successfully');
+        alert('Product updated successfully');
       });
   };
 
@@ -78,67 +88,75 @@ const EditProduct = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>EDIT THIS PRODUCT</Title>
+        <Title>EDIT THIS PRODUCT: {id}</Title>
         <Form onSubmit={handleAddUser}>
           <Input
             type="text"
             name="title"
             id="name"
+            value={user.title}
             placeholder="Title Name"
-            onBlur={handleInputOnBlur}
+            onChange={handleInputOnBlur}
             required
           />
           <Input
             type="text"
             name="desc"
+            value={user.desc}
             id="name"
             placeholder="Description"
-            onBlur={handleInputOnBlur}
+            onChange={handleInputOnBlur}
             required
           />
           <Input
             type="url"
             name="imgLink"
+            value={user.imgLink}
             id="lastName"
             placeholder="Insert Image Url"
-            onBlur={handleInputOnBlur}
+            onChange={handleInputOnBlur}
             required
           />
 
           <Input
             type="text"
             name="category"
+            value={user.category}
             id="category"
             placeholder="Category"
-            onBlur={handleInputOnBlur}
+            onChange={handleInputOnBlur}
             required
           />
           <Input
             type="text"
             name="size"
             id="size"
+            value={user.size}
             placeholder="Size"
-            onBlur={handleInputOnBlur}
+            onChange={handleInputOnBlur}
             required
           />
           <Input
             type="text"
             name="color"
+            value={user.color}
             id="color"
             placeholder="Color"
-            onBlur={handleInputOnBlur}
+            onChange={handleInputOnBlur}
             required
           />
           <Input
             type="number"
             name="price"
+           value={user.price}
             id="price"
             placeholder="Price"
-            onBlur={handleInputOnBlur}
+            onChange={handleInputOnBlur}
             required
+         
           />
 
-          <Button type="submit">CREATE</Button>
+          <Button type="submit">UPDATE</Button>
         </Form>
       </Wrapper>
     </Container>
