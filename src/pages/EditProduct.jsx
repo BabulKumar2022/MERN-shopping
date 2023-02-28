@@ -88,7 +88,7 @@ const EditProduct = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>EDIT THIS PRODUCT: {id}</Title>
+        <Title>EDIT THIS PRODUCT ID :  {id}</Title>
         <Form onSubmit={handleAddUser}>
           <Input
             type="text"
