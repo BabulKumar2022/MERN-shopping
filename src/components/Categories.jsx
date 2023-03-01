@@ -12,6 +12,7 @@ ${mobile({padding: "10px", flexDirection: "column"})};
 `
 
 const Categories = () => {
+  
   return (
     <Container>
         {categories.map(item =>(

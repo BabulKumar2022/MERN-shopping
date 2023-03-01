@@ -43,7 +43,8 @@ position: absolute;
 opacity:.3;
 `
 const Image = styled.img`
-height:75%
+height:75%;
+
 
 `
 
@@ -66,12 +67,11 @@ transition: all .25s ease;
 
 
 
-const Product = ({item}) => {
+const Product = ({product}) => {
   return (
     <Container>
       <Circle></Circle>
-      <Image src={item.img}/>
-      
+      <Image src={product.imgLink} />
       <Info>
         <Icon>
         <a href="/cart"><ShoppingCartIcon></ShoppingCartIcon> </a>
