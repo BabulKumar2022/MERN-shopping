@@ -73,7 +73,7 @@ const UpdateProduct = () => {
                     style={{ width: 100 }}
                     src={product.imgLink}
                     alt="photo"
-                  />{" "}
+                  />
                 </TableCell>
                 <TableCell>{product.category}</TableCell>
                 <TableCell>{product.size}</TableCell>

@@ -29,7 +29,7 @@ justify-content: center;
 
 `
 const Title = styled.h1`
-color: white;
+color: black;
 margin-bottom: 20px;
 
 `
@@ -42,12 +42,12 @@ cursor: pointer;
 font-wight: 600;
 text-decoration: none;
 `
-const CategoryItem = ({item}) => {
+const CategoryItem = ({product}) => {
   return (
     <Container>
-        <Image src={item.img}/>
+        <Image src={product.imgLink} />
         <Info>
-            <Title>{item.title}</Title>
+            <Title>{product.title}</Title>
             <Button href="/productList">SHOP NOW</Button>
         </Info>
     </Container>

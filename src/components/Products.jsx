@@ -24,11 +24,11 @@ const Products = () => {
   
   return (
     <Container>
-        {
-       products.map(product =>(
-        <Product product={product} key={product._id}></Product>
-       ))
-      }
+          {
+        products.map(product =>(
+          <Product product={product} key={product._id}></Product>
+        ))
+        }
 
     </Container>
   );
