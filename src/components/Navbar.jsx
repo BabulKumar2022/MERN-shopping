@@ -1,9 +1,9 @@
-import React from 'react';
 import styled from 'styled-components';
 import Search from '@mui/icons-material/Search';
 import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import {mobile} from "../responsive"
+
 
 const Container = styled.div`
    height: 80px;
@@ -79,6 +79,9 @@ text-decoration:none;
 `
 
 const Navbar = () => {
+
+
+
   return (
     <Container>
         <Wrapper>
@@ -91,15 +94,16 @@ const Navbar = () => {
             </Left>
             <Center><Logo>BABUL</Logo></Center>
             <Right>
-     
                <MenuItemLink href="/updateProduct">UPDATE PRODUCT</MenuItemLink>
                <MenuItemLink href="/addProduct">ADD PRODUCT</MenuItemLink>
                 <MenuItemLink href="/register">REGISTER</MenuItemLink>
                 <MenuItemLink href="/login">LOG IN</MenuItemLink>
                 <MenuItem>
-                <Badge badgeContent={4} color="secondary">
-                    <ShoppingCartIcon color="" />
-                </Badge>
+                  <MenuItemLink href="/cart" >
+                    <Badge badgeContent={4} color="secondary">
+                        <ShoppingCartIcon color="" />
+                    </Badge>
+                  </MenuItemLink>
                 </MenuItem>
             </Right>
         </Wrapper> 

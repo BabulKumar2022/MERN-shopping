@@ -134,13 +134,14 @@ const Hr = styled.hr`
 background-color: #eee;
 height:1px;
 `
-const Cart = () => {
+const Cart = ({cartItems}) => {
   return (
     <Container>
         {/* <Navbar/>
         <Announcement/> */}
         <Wrapper>
-            <Title>YOUR BAG</Title>
+            <Title>YOUR BAG {cartItems.length}</Title>
+            <Image src={cartItems.imgLink} />
             <Top>
                 <TopButton>Continue shopping</TopButton>
                 <TopTexts>

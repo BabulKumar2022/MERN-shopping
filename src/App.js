@@ -10,10 +10,15 @@ import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import SingleProduct from "./pages/SingleProduct";
 import EditProduct from "./pages/EditProduct";
+import { useState } from "react";
 
 
 
 function App() {
+
+
+
+  const [cartItems, setCartItems] = useState([]);
   return (
     <div className="">
       <Navbar></Navbar>
@@ -25,7 +30,8 @@ function App() {
           <Route path="/updateProduct" element={<UpdateProduct/>}></Route>
           <Route path="/productList" element={<ProductList/>}></Route>
           <Route path="/edit/:id" element={<EditProduct/>}></Route>
-          <Route path="/cart" element={<Cart/>}></Route>
+          <Route path="/cart" element={<Cart cartItems={cartItems}/>}></Route>
+          <Route path="/singleProduct" element={<SingleProduct/>}></Route>
 
         </Routes>
       {/* <Home></Home> */}
