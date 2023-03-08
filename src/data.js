@@ -42,6 +42,27 @@ export const categories=[
         title: "Girl style dress"
     },
 ]
+export const list=[
+
+    {
+        id: 4,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNefLtbjv9APBghx8TfT39-PO39eGIX3llM0nBkT0&s",
+        title: "Male general dress",
+        price: 50
+    },
+    {
+        id: 5,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgRuQGdf6jhbEmUYoOMjDeMBfh7GHJLwLhBw&usqp=CAU",
+        title: "Winter lady dress",
+        price: 50
+    },
+    {
+        id: 6,
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7NpDRGOiREblGI7hjCjwa1L1-9QOxVbQqlg&usqp=CAU",
+        title: "Girl style dress",
+        price: 50
+    },
+]
 
 
 export const popularProducts = [

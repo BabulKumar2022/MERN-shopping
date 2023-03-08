@@ -77,8 +77,27 @@ padding: 2px;
 text-decoration:none;
 
 `
+const Cart = styled.div`
 
-const Navbar = () => {
+
+`
+const Span1 = styled.span`
+font-size: 2rem;
+color: white;
+
+`
+const Span2 = styled.span`
+padding: 0 3px;
+background-color: red;
+color: white;
+font-weight: bold;
+border-radius: 5px;
+position: relative;
+top: -15px;
+
+`
+
+const Navbar = ({setShow, size}) => {
 
 
 
@@ -86,7 +105,7 @@ const Navbar = () => {
     <Container>
         <Wrapper>
             <Left>
-            <Language href="/">HOME</Language>
+            <Language href="/" onClick={()=> setShow(true)}>HOME</Language>
             <SearchContainer>
             <Input placeholder='search'></Input>
              <Search style={{color:"gray", fontSize:"24px"}}></Search>
@@ -99,11 +118,10 @@ const Navbar = () => {
                 <MenuItemLink href="/register">REGISTER</MenuItemLink>
                 <MenuItemLink href="/login">LOG IN</MenuItemLink>
                 <MenuItem>
-                  <MenuItemLink href="/cart" >
-                    <Badge badgeContent={4} color="secondary">
-                        <ShoppingCartIcon color="" />
-                    </Badge>
-                  </MenuItemLink>
+                  <Cart  onClick={()=> setShow(false)} >
+                    <Span1 ><i className='fas fa-cart-plus'></i></Span1>
+                    <Span2>{size}</Span2>
+                  </Cart>
                 </MenuItem>
             </Right>
         </Wrapper> 

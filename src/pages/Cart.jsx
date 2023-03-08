@@ -1,4 +1,6 @@
+
 import { Add, Remove } from '@mui/icons-material'
+
 import styled from 'styled-components'
 import Announcement from '../components/Announcement'
 import Footer from '../components/Footer'
@@ -134,14 +136,18 @@ const Hr = styled.hr`
 background-color: #eee;
 height:1px;
 `
-const Cart = ({cartItems}) => {
-  return (
+
+
+
+
+
+
+const Cart = (cart) => {
+
+    return (
     <Container>
-        {/* <Navbar/>
-        <Announcement/> */}
         <Wrapper>
-            <Title>YOUR BAG {cartItems.length}</Title>
-            <Image src={cartItems.imgLink} />
+             <Title>YOUR BAG  {cart.length} </Title>
             <Top>
                 <TopButton>Continue shopping</TopButton>
                 <TopTexts>
@@ -212,11 +218,11 @@ const Cart = ({cartItems}) => {
                     </SummeryItem>
                     <Button>CHECKOUT NOW</Button>
                 </Summary>
-            </Bottom>
+            </Bottom> 
         </Wrapper>
-        <Footer/>
+
     </Container>
   )
 }
 
-export default Cart
+export default Cart;
